@@ -1,0 +1,29 @@
+<h1>All Products</h1>
+
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Price</th>
+  </tr>
+  <% @products.each do |product| %>
+    </tr>
+      <td><%= product.id %></td>
+      <td><%= product.name %></td>
+      <td><%= product.description %> </td>
+      <td><%= product.price_in_cents %></td>
+      <td><%= link_to "Review", product_path(product) %>|</td> 
+      <td><%= link_to "Edit", edit_product_path(product) %></td>  
+    </tr>
+  <% end %>
+</table>
+<table>
+  <tr>
+    <td>
+      <%= link_to "Create a New Product", new_product_path, class: 'new_product' %>
+    </td>
+  </tr>
+</table>
+
+
