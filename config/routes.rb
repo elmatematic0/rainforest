@@ -1,9 +1,5 @@
 Rainforest::Application.routes.draw do
 
- 
-  get "reviews/show"
-  get "reviews/new"
-  get "reviews/edit"
  resources :products do 
   resources :reviews, :except => [:index]
   end
