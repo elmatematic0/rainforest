@@ -1,4 +1,10 @@
 Rainforest::Application.routes.draw do
+  get "products/new"
+  get "products/create"
+  get "products/edit"
+  get "products/update"
+  get "products/index"
+  get "products/destroy"
   get "sessions/new"
   get "sessions/create"
   get "sessions/destroy"
